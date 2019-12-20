@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer:  Client side routing allows the application to seem to run more smoothly. When routing to another page it doesn't refresh the page because the initial pull brings everything over that is needed. 
 
 ## Project Set Up
 
