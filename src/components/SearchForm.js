@@ -1,31 +1,22 @@
 import React, { useState, useEffect } from "react";
+import CharacterCard from "./CharacterCard"
+import CharacterList from "./CharacterList";
 
-export default function SearchForm(props) {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useStat([]);
 
-  const handleChange = event => {
-    setSearchTerm(event.target.value);
-  }
 
-  useEffect(() => {
-    const results = props.character.filter(char => 
-      char.toLowerCase().includes(searchTerm)
-      );
-      setSearchResults(results);
-  },[searchTerm]);
+export default function SearchForm({handleChange, query}) {
+  
+
 
   return (
     <section className="search-form">
       <input
         type="text"
         placeholder="Search"
-        value={searchTerm}
+        value={query}
         onChange={handleChange}
       />
-
-
-     // Add a search form here
+     
     </section>
   );
 }
