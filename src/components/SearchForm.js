@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
-import CharacterCard from "./CharacterCard"
-import CharacterList from "./CharacterList";
+import styled from "styled-components";
+import "../index.css";
+
+
+const Wrapper = styled.div`
+ padding-left: 35%;
+`;
 
 
 
@@ -9,14 +14,14 @@ export default function SearchForm({handleChange, query}) {
 
 
   return (
-    <section className="search-form">
-      <input
+    <Wrapper className="search-form">
+      <input className="search"
         type="text"
         placeholder="Search"
         value={query}
         onChange={handleChange}
       />
      
-    </section>
+    </Wrapper>
   );
 }
