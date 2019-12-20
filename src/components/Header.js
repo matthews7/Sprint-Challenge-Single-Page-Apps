@@ -5,9 +5,9 @@ export default function Header() {
   return (
     <header className="ui centered">
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
-      <div>
+      <div className="links">
       <Link to="/">Home</Link>
-      <Link to="/characters">Characters</Link>
+      <Link to="/character">Characters</Link>
       </div>
      
     </header>

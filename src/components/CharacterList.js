@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"
+import axios from "axios";
 import CharacterCard from "./CharacterCard";
-
+import Header from "./Header";
 
 
 export default function CharacterList() {
@@ -24,15 +24,18 @@ export default function CharacterList() {
   }, []);
   console.log(character);
   return (
-    <section className="character-list">
+    <div>
+      <Header/>
+      <section className="character-list">
       {character.map(char => {
         return(<div key={char.id}>
           <CharacterCard key={char.id} char={char}/>
         </div>
         )
       })}
-
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
+       // <h2>TODO: `array.map()` over your state here!</h2>
+       </section>
+    </div>
+   
   );
 }
